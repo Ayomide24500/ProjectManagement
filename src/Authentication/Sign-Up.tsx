@@ -24,7 +24,7 @@ function SignUp() {
   const handleSubmiteNow = handleSubmit((data: any) => {
     console.log(data);
     createAccount(data).then(() => {
-      navigate("/verify");
+      navigate("/signin");
     });
   });
   return (

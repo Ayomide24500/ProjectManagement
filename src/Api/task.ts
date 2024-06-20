@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const URL: string = "http://localhost:1200";
-const URL: string = "https://projectbe-2.onrender.com";
+const URL: string = "http://localhost:1200";
+// const URL: string = "https://projectbe-2.onrender.com";
 
 export const createTask = async (projectID: any, data: any) => {
   try {
