@@ -7,7 +7,7 @@ import { getProject } from "../../Api/Project";
 const AllTaskView = () => {
   const [loading, setLoading] = useState(true);
   const [tasks, setTasks] = useState([]);
-  const [state, setState] = useState([]);
+  const [, setState] = useState([]);
 
   useEffect(() => {
     setLoading(true);

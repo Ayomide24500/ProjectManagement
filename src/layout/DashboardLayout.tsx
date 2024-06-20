@@ -3,12 +3,12 @@ import DashboardHeader from "../components/Headers/DashboardHeader";
 
 import { FC } from "react";
 import Sidebar from "../components/Sidebar";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Layout: FC = () => {
-  const readToggle = useSelector((state: any): any => {
-    return state.toggle;
-  });
+  // const readToggle = useSelector((state: any): any => {
+  //   return state.toggle;
+  // });
   return (
     <div>
       <Sidebar />

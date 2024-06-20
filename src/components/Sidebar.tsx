@@ -1,16 +1,9 @@
-import { AiOutlineClose } from "react-icons/ai";
-import { FaEnvelopeOpenText, FaRProject } from "react-icons/fa6";
+import { FaRProject } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { changeMenuState, changeToggle, logOut } from "../global/reduxState";
+import { changeMenuState, logOut } from "../global/reduxState";
 import { NavLink } from "react-router-dom";
-import {
-  MdDashboard,
-  MdLogoDev,
-  MdLogout,
-  MdPeople,
-  MdTask,
-} from "react-icons/md";
+import { MdDashboard, MdLogout, MdTask } from "react-icons/md";
 const Sidebar = () => {
   const dispatch = useDispatch();
   const readToggle = useSelector((state: any) => {
