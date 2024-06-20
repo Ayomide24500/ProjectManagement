@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
-import { useSelector } from "react-redux";
 const AssignedTask = () => {
   const [isVisible, setIsVisible] = useState(true);
   // const [newProjectName, setNewProjectName] = useState("");
 
-  const id = useSelector((state: any) => state.projectID);
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };

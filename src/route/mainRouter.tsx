@@ -1,4 +1,4 @@
-import { createBrowserRouter, useParams } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
 import HomeScreen from "../Pages/FrontScreen/HomeScreen";
 import DashboardLayout from "../layout/DashboardLayout";

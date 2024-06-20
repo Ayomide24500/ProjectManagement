@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createProject, deletedProject, getProject } from "../../Api/Project";
+import { createProject, getProject } from "../../Api/Project";
 import pix from "../../assets/om.jpeg";
 import Calendar from "../../components/Calender";
 import ShowToday from "./Toggles/ShowToday";
@@ -8,15 +8,15 @@ import TaskManagementContainer from "./TaskBox";
 import CountdownTimer from "./Countdown";
 
 const DashboardScreen = () => {
-  const [selectedProjectId, setSelectedProjectId]: any = useState([]);
+  const [, setSelectedProjectId]: any = useState([]);
   const [state, setState]: any = useState([]);
   const [projectName, setProjectName] = useState("");
   const [showRecently, setShowRecently] = useState(true);
   const [showToday, setShowToday] = useState(false);
   const [viewTask, setViewTask] = useState(false);
-  const [showTask, setShowTask] = useState(false);
+  const [, setShowTask] = useState(false);
   const [activeLink, setActiveLink] = useState("Recently");
-  const [projectCount, setProjectCount] = useState(0);
+  const [, setProjectCount] = useState(0);
 
   const handleViewTask = (taskId: any) => {
     setSelectedProjectId(taskId);
@@ -41,13 +41,6 @@ const DashboardScreen = () => {
     setViewTask(false);
     setShowTask(false);
     setActiveLink("Today");
-  };
-  const handleShowTask = () => {
-    setShowRecently(false);
-    setViewTask(false);
-    setShowToday(false);
-    setShowTask(true);
-    setActiveLink("Task");
   };
 
   const handleCreateProject = async () => {
@@ -74,14 +67,6 @@ const DashboardScreen = () => {
     } catch (error) {
       console.error("Error creating project:", error);
     }
-  };
-
-  const handleDeleteProject = (projectID: string) => {
-    deletedProject(projectID).then(() => {
-      getProject().then((res: any) => {
-        setState(res.data);
-      });
-    });
   };
 
   useEffect(() => {

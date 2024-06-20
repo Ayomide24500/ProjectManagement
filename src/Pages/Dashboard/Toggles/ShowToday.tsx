@@ -3,7 +3,7 @@ import { deletedProject, getProject } from "../../../Api/Project";
 import { useDispatch } from "react-redux";
 import { addProjectID } from "../../../global/reduxState";
 import CreateTaskview from "../CreateTaskview";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button";
 
 const ShowToday = () => {
@@ -13,13 +13,13 @@ const ShowToday = () => {
   const [state, setState]: any = useState([]);
   const [selectedProjectId, setSelectedProjectId]: any = useState([]);
   const [toggle, setToggle] = useState(false);
-  const [showRecently, setShowRecently] = useState(true);
-  const [showToday, setShowToday] = useState(false);
-  const [viewTask, setViewTask] = useState(false);
-  const [showTask, setShowTask] = useState(false);
-  const [activeLink, setActiveLink] = useState("Today");
+  const [, setShowRecently] = useState(true);
+  const [, setShowToday] = useState(false);
+  const [, setViewTask] = useState(false);
+  const [, setShowTask] = useState(false);
+  const [, setActiveLink] = useState("Today");
 
-  const [ID, setID] = useState("");
+  const [, setID] = useState("");
 
   const handleShowTask = () => {
     setShowRecently(false);
