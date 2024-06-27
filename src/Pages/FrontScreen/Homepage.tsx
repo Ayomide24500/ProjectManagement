@@ -14,7 +14,10 @@ const Homepage = () => {
               <div className="h-[7%] lg:w-[50%] lg:text-[19px] text-[12px] w-[100%] lg:mr-0 border-2 text-white border-yellow-500 flex justify-center items-center rounded-[30px] font-semibold mt-9">
                 Best Project Management Tool
               </div>
-              <div className="w-[80%] text-white font-mono font-bold lg:text-[50px] text-[20px] mt-[20px]">
+              <div
+                className="w-[80%] 
+              text-white font-mono font-bold lg:text-[50px] text-[20px] mt-[20px]"
+              >
                 <TypeAnimation
                   sequence={[
                     "Manage",
