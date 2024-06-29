@@ -85,13 +85,13 @@ const DashboardScreen = () => {
         borderRadius: "20px",
       }}
     >
-      <div className="w-full lg:h-[70%] h-full bg-yellow-50 grid lg:grid-cols-2 grid-cols-1 lg:gap-32 gap-5">
+      <div className="w-full lg:h-[70%] h-full grid lg:grid-cols-2 grid-cols-1 lg:gap-32 gap-5">
         <div
           className="lg:h-full min-h-[200px] lg:min-w-[800px] w-full grid lg:grid-cols-2 grid-cols-1 gap-7"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(233,186,11,1) 0%, rgba(233,186,11,1) 0%)",
-          }}
+          // style={{
+          //   background:
+          //     "linear-gradient(90deg, rgba(233,186,11,1) 0%, rgba(233,186,11,1) 0%)",
+          // }}
         >
           <div className="flex flex-wrap w-full">
             <div className="w-10 h-10 object-cover flex rounded-full items-center justify-center mt-4 ml-3 border-none">
@@ -101,10 +101,10 @@ const DashboardScreen = () => {
               />
             </div>
             <div>
-              <p className="pl-10 pt-5 font-bold text-xl text-white">
+              <p className="pl-10 pt-5 font-bold text-xl text-black">
                 Hello {state.name}
               </p>
-              <h1 className="pl-10 pt-5 font-bold text-3xl text-white">
+              <h1 className="pl-10 pt-5 font-bold text-3xl text-black">
                 You've got <br />
                 {state?.length} project(s) today
               </h1>
@@ -115,12 +115,12 @@ const DashboardScreen = () => {
               className="h-[50px] w-[80%] border-none outline-none bg-gray-200 pl-3 ml-8 mt-6"
             />
           </div>
-          <div className="w-full p-4 bg-black flex justify-center items-center flex-col gap-14 ">
-            <h1 className="pt-5 font-bold lg:text-3xl text-[19px] text-center text-white">
+          <div className="w-full p-4 flex justify-center items-center flex-col gap-14 shadow">
+            <h1 className="pt-5 font-bold lg:text-3xl text-[19px] text-center text-black">
               My Project And Your Task
             </h1>
             <div className="flex justify-center items-center">
-              <button className="h-[48px] w-[249px] shadow-md shadow-yellow-500 text-white font-bold mr-9 rounded ml-9 -mt-8">
+              <button className="h-[48px] w-[249px] bg-black shadow-md shadow-yellow-500 text-white font-bold mr-9 rounded ml-9 -mt-8">
                 <CountdownTimer />
               </button>
             </div>
@@ -147,14 +147,14 @@ const DashboardScreen = () => {
               Add Project
             </button>
           </div>
-          <div className="w-full lg:p-4 p-5 overflow-x-auto bg-yellow-500">
+          <div className="w-full lg:p-4 p-5 overflow-x-auto shadow-sm bg-white">
             <Calendar />
           </div>
         </div>
       </div>
 
       <div className="w-full lg:min-h-[530px] bg-yellow-50 grid lg:grid-cols-2 lg:gap-32 lg:-mt-28 mt-3 grid-cols-1 gap-4">
-        <div className="lg:h-full h-[600px] lg:min-w-[700px] w-full bg-yellow-500 ">
+        <div className="lg:h-full h-[600px] lg:min-w-[700px] w-full bg-white shadow-md">
           <div className="h-[50px] w-[95%] flex justify-around items-center gap-5 ml-2 mt-7 bg-black relative">
             <nav
               className={`font-bold lg:text-xl cursor-pointer text-white ${
@@ -224,10 +224,10 @@ const DashboardScreen = () => {
               <div
                 style={{
                   height: "100%",
-                  overflowY: "auto",
-                  scrollbarWidth: "thin",
+                  // overflowY: "auto",
+                  // scrollbarWidth: "thin",
                 }}
-                className="bg-yellow-500"
+                className="bg-white"
               >
                 <div className="flex flex-wrap">
                   <TaskManagementContainer />
@@ -249,8 +249,8 @@ const DashboardScreen = () => {
             )} */}
           </div>
         </div>
-        <div className="lg:h-full h-[400px] w-full bg-yellow-500 flex justify-center items-center">
-          <h1 className="font-bold text-3xl text-center">
+        <div className="lg:h-full h-[400px] w-full shadow-md shadow-yellow-300 bg-white ">
+          <h1 className="font-bold text-3xl text-center pt-10">
             Coming Soon 👌🚀🚀🚀
           </h1>
         </div>

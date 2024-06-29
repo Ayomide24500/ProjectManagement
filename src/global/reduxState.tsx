@@ -11,8 +11,8 @@ const reduxState = createSlice({
   initialState,
   reducers: {
     changeToggle: (state: any, { payload }) => {
-      const { toggleName, value } = payload;
-      state.toggle[toggleName] = value;
+      // const { toggleName, value } = payload;
+      state.toggle = payload;
     },
     changeMenuState: (state, { payload }) => {
       state.toggle = payload;

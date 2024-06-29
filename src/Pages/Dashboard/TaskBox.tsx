@@ -25,7 +25,7 @@ const TaskManagementContainer = () => {
       <div className="py-5 px-5 flex gap-8 lg:mb-0 bg-black text-yellow-400 font-bold">
         <p className="cursor-pointer">View Tasks</p>
       </div>
-      <div className="w-[100%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-3">
+      <div className="w-[100%] h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-3 overflow-y-auto">
         {state &&
           state?.map((task: any) => (
             <div key={task._id}>

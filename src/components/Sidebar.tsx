@@ -1,9 +1,16 @@
-import { FaRProject } from "react-icons/fa6";
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaClosedCaptioning,
+  FaEnvelopeOpenText,
+  FaRProject,
+} from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { changeMenuState, logOut } from "../global/reduxState";
+import { changeMenuState, changeToggle, logOut } from "../global/reduxState";
 import { NavLink } from "react-router-dom";
-import { MdDashboard, MdLogout, MdTask } from "react-icons/md";
+import { MdDashboard, MdLogout, MdSmartDisplay, MdTask } from "react-icons/md";
+import { AiOutlineClose } from "react-icons/ai";
 const Sidebar = () => {
   const dispatch = useDispatch();
   const readToggle = useSelector((state: any) => {
@@ -27,7 +34,7 @@ const Sidebar = () => {
         width: `${readToggle ? "240px" : "70px"}`,
       }}
     >
-      {/* <div className="m-3">
+      <div className="m-3">
         {readToggle ? (
           <div
             className="cursor-pointer"
@@ -35,7 +42,7 @@ const Sidebar = () => {
               dispatch(changeToggle(false));
             }}
           >
-            <FaEnvelopeOpenText size={25} />
+            <FaArrowLeft size={20} />
           </div>
         ) : (
           <div
@@ -44,10 +51,10 @@ const Sidebar = () => {
               dispatch(changeToggle(true));
             }}
           >
-            <AiOutlineClose size={25} />
+            <FaArrowRight size={20} />
           </div>
         )}
-      </div> */}
+      </div>
       <div className="h-[90%] flex flex-col">
         <div className="text-[32px] font-bold w-full pl-3 pt-4 ">
           <FaRProject />
