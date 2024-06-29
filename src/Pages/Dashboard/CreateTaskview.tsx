@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { updateProject } from "../../Api/Project";
 import { useSelector } from "react-redux";
+import { MdCloseFullscreen, MdUpdate } from "react-icons/md";
 const CreateTaskview = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [newProjectName, setNewProjectName] = useState("");
@@ -50,21 +51,21 @@ const CreateTaskview = () => {
               onChange={(e) => setNewProjectName(e.target.value)}
               className="h-[50px] lg:w-[30%] w-[70%] outline-none border-none pl-5"
             />
-            <button
+            <div
               onClick={(event) => {
                 event.preventDefault();
                 handleUpdateProject(newProjectName);
               }}
-              className="lg:p-5 p-3 shadow bg-yellow-500"
+              className="lg:p-5 p-3 shadow bg-yellow-500 cursor-pointer"
             >
-              Update Project
-            </button>
-            <button
+              <MdUpdate />
+            </div>
+            <div
               onClick={toggleVisibility}
-              className="lg:p-5 p-3 shadow shadow-white bg-yellow-500"
+              className="lg:p-5 p-3 shadow shadow-white cursor-pointer"
             >
-              Handle go off
-            </button>
+              <MdCloseFullscreen />
+            </div>
           </form>
         </div>
       ) : null}
