@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createProject, getProject } from "../../Api/Project";
 import pix from "../../assets/om.jpeg";
+import { Toaster, toast } from "react-hot-toast";
 import Calendar from "../../components/Calender";
 import ShowToday from "./Toggles/ShowToday";
 import ShowRecently from "./Toggles/ShowRecently";
@@ -61,6 +62,7 @@ const DashboardScreen = () => {
         setState((prevProjects: any) => [...prevProjects, createdProject]);
 
         setProjectCount((prevCount) => prevCount + 1);
+        toast.success("Project created successfully!");
       } else {
         console.error("Invalid response format:", response);
       }
@@ -75,8 +77,6 @@ const DashboardScreen = () => {
     });
   }, []);
 
-  // console.log(ID);
-
   return (
     <div
       className="grid grid-rows-2 shadow-lg p-5 min-h-full lg:mb-0 mb-20"
@@ -85,6 +85,8 @@ const DashboardScreen = () => {
         borderRadius: "20px",
       }}
     >
+      <Toaster />
+
       <div className="w-full lg:h-[70%] h-full grid lg:grid-cols-2 grid-cols-1 lg:gap-32 gap-5">
         <div
           className="lg:h-full min-h-[200px] lg:min-w-[800px] w-full grid lg:grid-cols-2 grid-cols-1 gap-7"

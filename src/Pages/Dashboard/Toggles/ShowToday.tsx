@@ -76,7 +76,6 @@ const ShowToday = () => {
                     <span className="lg:text-xl font-bold mr-3">
                       {project.projectName}
                     </span>
-                    {/* <span className="text-gray-500">Due: 2023-12-31</span> */}
                   </div>
                   <div className="flex items-center">
                     <button
