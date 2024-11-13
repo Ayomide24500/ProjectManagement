@@ -1,8 +1,8 @@
 import axios from "axios";
 
 // const URL: string = "http://localhost:1200/api/v1";
-// const URL: string = "https://projectbe-2.onrender.com/api/v1";
-const URL: string = "https://mangement-be.onrender.com/api/v1";
+const URL: string = "https://projectbe-2.onrender.com/api/v1";
+// const URL: string = "https://mangement-be.onrender.com/api/v1";
 
 export const createProject = async (projectData: any) => {
   try {
